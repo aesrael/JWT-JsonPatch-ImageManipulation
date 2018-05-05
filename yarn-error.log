@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add lodash
+
+PATH: 
+  /home/israeladura/bin:/home/israeladura/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.8.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "prostus",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "start": "nodemon ./app.js"
+    },
+    "dependencies": {
+      "async": "^2.6.0",
+      "bcryptjs": "^2.4.3",
+      "body-parser": "~1.18.2",
+      "connect-flash": "^0.1.1",
+      "cookie-parser": "~1.4.3",
+      "cors": "^2.8.4",
+      "debug": "~2.6.9",
+      "dotenv": "^5.0.1",
+      "ejs": "^2.5.7",
+      "express": "~4.15.5",
+      "express-session": "^1.15.6",
+      "express-validator": "^4.3.0",
+      "jsonwebtoken": "^8.2.0",
+      "mongoose": "^5.0.6",
+      "morgan": "~1.9.0",
+      "multer": "^1.3.0",
+      "nodemailer": "^4.6.0",
+      "passport": "^0.4.0",
+      "passport-local": "^1.0.0",
+      "serve-favicon": "~2.4.5"
+    },
+    "devDependencies": {
+      "chalk": "^2.3.1",
+      "eslint": "^4.18.1",
+      "nodemon": "^1.15.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: read ECONNRESET
+      at TLSWrap.onread (net.js:599:25)

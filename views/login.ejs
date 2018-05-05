@@ -1,0 +1,35 @@
+<form action='/login' method='POST'>
+
+    <input name='email'>
+    <input type="password" name='password'>
+    <input type="submit" value='send'>
+</form>
+
+<!-- <script>
+    var arr = []
+    var db = fetch('http://localhost:8080/login', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: "israeladura",
+                password: "code"
+            })
+        }).then(response => response.json()).then((json) => arr.push({
+            user: json.user,
+            token: json.token
+        }))
+        .catch(error => {
+            throw error;
+        });
+
+    db.then(() => {
+        localStorage.setItem('user', JSON.stringify(arr[0]));
+        var user = JSON.parse(localStorage.getItem('user'));
+        console.log(user, 'from local storage')
+    })
+
+console.log(user, 'from local storage')
+    //  localStorage.clear();
+</script> -->
