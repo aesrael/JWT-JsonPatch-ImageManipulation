@@ -4,8 +4,6 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const logger = require("morgan");
-const passport = require("passport");
-const jwt = require("jsonwebtoken");
 const index = require("./routes/index");
 
 const app = express();
@@ -49,6 +47,7 @@ app.use((err, req, res, next) => {
     // render the error page
     res.status(err.status || 500);
     res.render("error");
+    next();
 });
 //set port
 app.set("port", process.env.PORT || 8080);

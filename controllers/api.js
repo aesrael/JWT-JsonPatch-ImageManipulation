@@ -7,6 +7,14 @@ const jimp = require("jimp");
 const path = require("path");
 
 /**
+ * GET /index
+ * index page
+ */
+exports.index = (req, res) => {
+    res.send("Hello HackerBay");
+};
+
+/**
  * POST /login
  * Sign in using email and password.
  */
