@@ -1,4 +1,4 @@
-const User = require("../models/User");
+// const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 /**
@@ -7,8 +7,8 @@ const jwt = require("jsonwebtoken");
  */
 
 exports.index = (req, res) => {
-  // console.log(req.user)
-  res.json("welcome to prostus");
+    // console.log(req.user)
+    res.send("Hello HackerBay");
 };
 
 // exports.dashboard = (req, res) => {
@@ -16,29 +16,32 @@ exports.index = (req, res) => {
 //     res.json(req.user);
 // };
 exports.dashboard = (req, res) => {
-  const token = getToken(req.headers);
-  console.log("/auth" + token);
-  if (token) {
-    const decode = jwt.decode(token, config.secret);
-    User.findOne({ name: decode.name }, function(err, user) {
-      if (err) {
-        res.json(err);
-      }
-      if (!user) {
-        return res.send({ success: false, msg: "Authentication Failed" });
-      } else {
-        res.json(user);
-      }
-    });
-  } else {
-    return res.json({ success: false, msg: "No Token Found" });
-  }
+    const token = getToken(req.headers);
+    console.log("/auth" + token);
+    if (token) {
+        const decode = jwt.decode(token, config.secret);
+        User.findOne({ name: decode.name }, function(err, user) {
+            if (err) {
+                res.json(err);
+            }
+            if (!user) {
+                return res.send({
+                    success: false,
+                    msg: "Authentication Failed"
+                });
+            } else {
+                res.json(user);
+            }
+        });
+    } else {
+        return res.json({ success: false, msg: "No Token Found" });
+    }
 };
 
 const getToken = function(headers) {
-  if (headers && headers.authorization) {
-    return headers.authorization;
-  } else {
-    return null;
-  }
+    if (headers && headers.authorization) {
+        return headers.authorization;
+    } else {
+        return null;
+    }
 };
