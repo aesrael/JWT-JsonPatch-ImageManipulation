@@ -1,5 +1,3 @@
-API for hackerbay backend task
-
 ### Installation & Setup
 
 1.  Install [Node.js](https://nodejs.org/)
