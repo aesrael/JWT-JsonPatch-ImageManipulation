@@ -5,9 +5,9 @@ API for hackerbay backend task
 1.  Install [Node.js](https://nodejs.org/)
 2.  Clone this repository and install its dependencies. 
 
-		> git clone git://github.com/israeladura/backend-task.git 
+		> git clone git://github.com/israeladura/JWT-JsonPatch-ImageManipulation.git 
 
-		> cd backend-task 
+		> cd JWT-JsonPatch-ImageManipulation 
 
 		> npm install
 
